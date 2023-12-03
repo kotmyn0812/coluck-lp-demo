@@ -22,37 +22,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const processing = () => {
     // jsの記述
+		let pageTopPosition = document
+			.querySelector(".page-top")
+			.getBoundingClientRect().top;
+		const pageTopBtn = document.querySelector(".page-top");
+		const scrollPosition = window.scrollY; //現在地
+		const footHeight = document.querySelector(".l-footer").clientHeight; //footerの高さ
+		let abjustPosY = 5;
     if (document.querySelector("#top")) {
-      document.querySelector(".l-header__nav").classList.remove("sticky-top");
-      document.querySelector(".l-header__nav").classList.add("fixed-top");
+      let targetAreaPosition = document
+        .querySelector(".video-wrapper")
+        .getBoundingClientRect().bottom;
+      document.querySelector(".l-header").classList.remove("sticky-top");
+      document.querySelector(".l-header").classList.add("fixed-top");
+      if (pageTopPosition >= targetAreaPosition) {
+        pageTopBtn.classList.remove("is-hide"); // エリアを離れたらクラスを削除
+      } else {
+        pageTopBtn.classList.add("is-hide"); // 新しいクラスを付与
+      }
+      stopBtn();
+			const stopBtn = function () {
+				const video = document.querySelector("#mainv");
+				const button = document.querySelector("[data-play]");
+				const buttonImg = document.querySelector("[data-btnimg]");
+
+				button.addEventListener("click", function () {
+					if (this.classList.contains("stop")) {
+						this.classList.remove("stop");
+						video.play();
+						buttonImg.setAttribute("src", "/assets/img/stop.svg");
+						buttonImg.setAttribute("alt", "stop");
+					} else {
+						this.classList.add("stop");
+						video.pause();
+						buttonImg.setAttribute("src", "/assets/img/start.svg");
+						buttonImg.setAttribute("alt", "play");
+					}
+				});
+			};
     }
 
-    (function () {
-      const video = document.querySelector("#mainv");
-      const button = document.querySelector("[data-play]");
-      const buttonImg = document.querySelector("[data-btnimg]");
-
-      button.addEventListener("click", function () {
-        if (this.classList.contains("stop")) {
-          this.classList.remove("stop");
-          video.play();
-          buttonImg.setAttribute("src", "/assets/img/stop.svg");
-          buttonImg.setAttribute("alt", "stop");
-        } else {
-          this.classList.add("stop");
-          video.pause();
-          buttonImg.setAttribute("src", "/assets/img/start.svg");
-          buttonImg.setAttribute("alt", "play");
-        }
-      });
-    })();
-
     const pageTopfunc = () => {
-      const scrollPosition = window.scrollY; //現在地
-      const pageTopBtn = document.querySelector(".page-top");
-      const footHeight = document.querySelector(".l-footer").clientHeight; //footerの高さ
-      let abjustPosY = 5;
-
       const scrollHeight = Math.max(
         document.body.scrollHeight,
         document.documentElement.scrollHeight,
@@ -65,17 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const windowHeight = window.innerHeight;
 
       const bottomPosition = scrollHeight - windowHeight; //スクロール一番下の値
-
-      let pageTopPosition = document.querySelector(".page-top").getBoundingClientRect().top;
-			console.log(pageTopPosition);
-      let targetAreaPosition = document.querySelector(".video-wrapper").getBoundingClientRect().bottom;
-			console.log(targetAreaPosition);
-
-      if (pageTopPosition >= targetAreaPosition) {
-        pageTopBtn.classList.remove("is-hide"); // エリアを離れたらクラスを削除
-      } else {
-				pageTopBtn.classList.add("is-hide"); // 新しいクラスを付与
-			}
 
       if (bottomPosition - footHeight + 20 <= scrollPosition) {
         pageTopBtn.style.position = "absolute";
