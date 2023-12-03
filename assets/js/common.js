@@ -22,5 +22,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const processing = () => {
 		// jsの記述
+		(function () {
+			const video = document.querySelector("#mainv");
+			const button = document.querySelector("[data-play]");
+			const buttonImg = document.querySelector("[data-btnimg]");
+
+			button.addEventListener("click", function () {
+				if (this.classList.contains("stop")) {
+					this.classList.remove("stop");
+					video.play();
+					buttonImg.setAttribute('src','/assets/img/stop.svg')
+					buttonImg.setAttribute('alt','stop')
+				} else {
+					this.classList.add("stop");
+					video.pause();
+					buttonImg.setAttribute('src','/assets/img/start.svg')
+					buttonImg.setAttribute('alt','play')
+				}
+			});
+		}());
+
 	};
 });
