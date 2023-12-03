@@ -29,17 +29,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const scrollPosition = window.scrollY; //現在地
     const footHeight = document.querySelector(".l-footer").clientHeight; //footerの高さ
     let abjustPosY = 5;
-    if (document.querySelector("#top")) {
+    const fixedBtn = function () {
       let targetAreaPosition = document
         .querySelector(".video-wrapper")
         .getBoundingClientRect().bottom;
-      document.querySelector(".l-header").classList.remove("sticky-top");
-      document.querySelector(".l-header").classList.add("fixed-top");
       if (pageTopPosition >= targetAreaPosition) {
         pageTopBtn.classList.remove("is-hide"); // エリアを離れたらクラスを削除
       } else {
         pageTopBtn.classList.add("is-hide"); // 新しいクラスを付与
       }
+    };
+    if (document.querySelector("#top")) {
+      document.querySelector(".l-header").classList.remove("sticky-top");
+      document.querySelector(".l-header").classList.add("fixed-top");
+
       const stopBtn = function () {
         const video = document.querySelector("#mainv");
         const button = document.querySelector("[data-play]");
@@ -77,18 +80,26 @@ document.addEventListener("DOMContentLoaded", () => {
       const bottomPosition = scrollHeight - windowHeight; //スクロール一番下の値
 
       if (bottomPosition - footHeight + 20 <= scrollPosition) {
+        console.log("object");
         pageTopBtn.style.position = "absolute";
         pageTopBtn.style.bottom = abjustPosY + "px";
       } else {
+        console.log("object1");
         pageTopBtn.style.position = "fixed";
         pageTopBtn.style.bottom = abjustPosY + "px";
       }
     };
 
     window.addEventListener("load", function () {
+      if (document.querySelector("#top")) {
+        fixedBtn();
+      }
       pageTopfunc();
     });
     window.addEventListener("scroll", function () {
+      if (document.querySelector("#top")) {
+        fixedBtn();
+      }
       pageTopfunc();
     });
   };
