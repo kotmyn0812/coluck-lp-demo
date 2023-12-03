@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="jp" style="scroll-padding-top:50px;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Coluckの紹介サイトです">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kotmyn0812.github.io/coluck-lp-demo/">
+    <meta property="og:title" content="Coluck">
+    <meta property="og:description" content="Coluckの紹介サイトです">
+    <meta property="og:image" content="">
+    <title>Coluck</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="icon" href="./favicon.ico">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="./logo.png" height="30"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse fw-bold" id="navbarNav">
+                <ul class="navbar-nav ms-auto me-2">
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="#hero">ホーム</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#feature">特徴</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#showcases">詳細</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#price">プラン</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">メンバー</a></li>
+                </ul>
+                <a class="btn btn-dark btn-sm text-white" href="#">無料で始める</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="bg-primary py-5" id="hero">
+        <div class="container overflow-hidden">
+            <div class="row flex-lg-row-reverse align-items-center">
+                <div class="col-lg-6" data-aos="zoom-in">
+                    <img src="https://doodleipsum.com/700x394/flat?i=41f017cf42bb4f905a48613ec87b613b" class="img-fluid">
+                </div>
+                <div class="col-lg-6" data-aos="fade-up">
+                    <p class="badge bg-warning text-white mb-1">HTMLだけでコーディング</p>
+                    <h1 class="text-white">Bootstrap超入門</h1>
+                    <p class="lead text-white">Webプログラミング初心者がこのページを作れるようになる！</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURE -->
+    <section class="bg-light py-4" id="feature">
+        <div class="container overflow-hidden">
+            <div class="row text-center" data-aos="zoom-in">
+                <div class="col-md-4 mb-3">
+                    <div class="fs-1"><i class="bi bi-film text-primary"></i></div>
+                    <h5>物語りがある</h5>
+                    <p class="text-secondary">「実用的に使える」または「新しい体験ができる」をテーマに、必要最小限の技術を使ってストーリーを展開し伏線を回収するコンテンツです。</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="fs-1"><i class="bi bi-tools text-primary"></i></div>
+                    <h5>新しいものづくり</h5>
+                    <p class="text-secondary">「ハードウェアだけでなく、プログラミングやデータサイエンスも１つのツールとして活用する「新しい時代のものづくり」です。</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="fs-1"><i class="bi bi-award text-primary"></i></div>
+                    <h5>モノにする</h5>
+                    <p class="text-secondary">技術要素をステップバイステップで学びながら、演習で試行錯誤を行い、自ら考え成果物を作り上げるスタイルです。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHOWCASES -->
+    <section class="bg-white py-5" id="showcases">
+        <div class="container overflow-hidden">
+            <div class="row mb-5 align-items-center">
+                <div class="col-lg-6 order-lg-1" data-aos="zoom-in-right">
+                    <img class="img-fluid" src="https://doodleipsum.com/700x394/hand-drawn?i=0e05d2d124e0a86b24727ce6006b739a">
+                </div>
+                <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+                    <span class="display-3 text-primary">01</span>
+                    <h3>物語りのあるコンテンツ</h3>
+                    <p>網羅的な説明が書かれたコンテンツではなく、映画のようにこころを動かすコンテンツを目指しています。シナリオ作りから検証を重ねて作成しています。</p>
+                </div>
+            </div>
+            <div class="row mb-5 align-items-center">
+                <div class="col-lg-6 order-lg-2" data-aos="zoom-in-left">
+                    <img class="img-fluid" src="https://doodleipsum.com/700x394/hand-drawn?i=4a51d1ffc4e6797c11a5b4c7cc33cda6">
+                </div>
+                <div class="col-lg-6 order-lg-1" data-aos="fade-right">
+                    <span class="display-3 text-primary">02</span>
+                    <h3>新しい時代のものづくり</h3>
+                    <p>数十年の間に「ものづくり製品」から「ウェブサービス」へ時代が一変しましたが、更に時代は変化し続けます。画面の中だけの世界ではなく、リアルな世界に作用するものにこだわっています。</p>
+                </div>
+            </div>
+            <div class="row mb-5 align-items-center">
+                <div class="col-lg-6 order-lg-1" data-aos="zoom-in-right">
+                    <img class="img-fluid" src="https://doodleipsum.com/700x394/hand-drawn?i=0293217a2126d91159f5a6717396cbe4">
+                </div>
+                <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+                    <span class="display-3 text-primary">03</span>
+                    <h3>ステップバイステップでモノにする</h3>
+                    <p>「ものものテック」では創業以来、毎年多数のリアルなハンズオンを企業・自治体・大学・各種イベント等で実施しています。リアルな教育でのエッセンスや最適化された難易度で皆さんの学びを加速します。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-primary py-5">
+        <div class="container overflow-hidden" data-aos="zoom-in">
+            <div class="row text-center">
+                <div class="col">
+                    <h3 class="py-5 text-white">あなたの物語を実現しよう！</h3>
+                    <p class="lead text-white">ほぼCSSやJavaScriptは記述せずに、HTMLのコーディングだけでランディングページを作れます。</p>
+                    <p class="lead py-3"><a href="#" class="btn btn-lg btn-outline-light">学習を始める</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICE -->
+    <section class="bg-light py-5" id="price">
+        <div class="container overflow-hidden">
+            <div class="row text-center">
+                <h3 class="mb-4">プランを比較</h3>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3">
+                <div class="col">
+                    <div class="card mb-4 shadow-sm" data-aos="zoom-in" data-aos-delay="0">
+                        <div class="card-header p-3">
+                            <h4 class="my-0 fw-normal">お試しプラン</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title fs-1"><span class="h4">¥</span>0<span class="h4 text-secondary fw-light">
+                                    /月</span></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li><i class="bi-check-lg text-success"></i>概要の把握と体験</li>
+                                <li class="text-secondary text-decoration-line-through">全ての学習コンテンツ閲覧</li>
+                                <li class="text-secondary text-decoration-line-through">講師による講義</li>
+                                <li class="text-secondary text-decoration-line-through">メンターによるサポート</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-outline-primary">すぐに試す</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 shadow-sm border-primary" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="card-header bg-primary py-3 border-primary">
+                            <h4 class="my-0 text-white fw-normal">個人プラン</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title fs-1"><span class="h4">¥</span>0<span class="h4 text-secondary fw-light">
+                                    /月（今だけ特別！）</span></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li><i class="bi-check-lg text-success"></i>概要の把握と体験</li>
+                                <li><i class="bi-check-lg text-success"></i>全ての学習コンテンツ閲覧</li>
+                                <li class="text-secondary text-decoration-line-through">講師による講義</li>
+                                <li class="text-secondary text-decoration-line-through">メンターによるサポート</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-primary">登録・ログイン</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 shadow-sm" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">法人プラン</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title fs-1"><span class="h4">¥</span>50,000〜<span class="h4 text-secondary fw-light"> /月</span>
+                            </h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li><i class="bi-check-lg text-success"></i>概要の把握と体験</li>
+                                <li><i class="bi-check-lg text-success"></i>全ての学習コンテンツ閲覧</li>
+                                <li><i class="bi-check-lg text-success"></i>講師による講義</li>
+                                <li><i class="bi-check-lg text-success"></i>メンターによるサポート</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-outline-primary">ご相談ください</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="bg-white py-5" id="faq">
+        <div class="container overflow-hidden">
+            <div class="row text-center">
+                <h3 class="mb-4">よくある質問</h3>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-3" data-aos="zoom-in-right">
+                    <img class="img-fluid" src="https://doodleipsum.com/700x394/flat?i=bcfd79692eeea887b9f20887c5a3a401">
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="accordion" id="accordionFAQ">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                    <p>Q. コンテンツは最後まで無料で学習可能なのでしょうか？</p>
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    A. 登録するだけで最後まで無料で学習できます。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    <p>Q. 登録にはお金がかかりますか？</p>
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    A. 登録は無料です。入会金や年会費などもかかりません。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    <p>Q. このページは何ですか？</p>
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body">
+                                    A. 「Bootstrap超入門」コンテンツのサンプルページです。学ぶことでこのページが最終的に作れるようになります。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="bg-light p-5" id="team">
+        <div class="container overflow-hidden">
+            <div class="row text-center">
+                <h3 class="mb-4">講師／メンター</h3>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-6 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="0">
+                    <div class="bg-white border shadow p-4 h-100">
+                        <img class="rounded-circle mb-3" src="https://doodleipsum.com/700x700/avatar-4?bg=87CEEB&i=3c872b28d4577889c194cbc98b672696" width="80">
+                        <p class="text-secondary fw-bold">佐藤 太郎</p>
+                        <p class="border-bottom">チーフエンジニア</p>
+                        <p>本ページはサンプルであり、サポートメンバーは架空の人物です。</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-white border shadow p-4 h-100">
+                        <img class="rounded-circle mb-3" src="https://doodleipsum.com/700x700/avatar-4?bg=87CEEB&i=8de3b58cab71e0ce7d1e1081418edb62" width="80">
+                        <p class="text-secondary fw-bold">鈴木 太郎</p>
+                        <p class="border-bottom">エンジニア</p>
+                        <p>本ページはサンプルであり、サポートメンバーは架空の人物です。</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white border shadow p-4 h-100">
+                        <img class="rounded-circle mb-3" src="https://doodleipsum.com/700x700/avatar-4?bg=87CEEB&i=58e15545cbaaccdde1e619aa57b6f85f" width="80">
+                        <p class="text-secondary fw-bold">高橋 花子</p>
+                        <p class="border-bottom">デザイナー</p>
+                        <p>本ページはサンプルであり、サポートメンバーは架空の人物です。</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-white border shadow p-4 h-100">
+                        <img class="rounded-circle mb-3" src="https://doodleipsum.com/700x700/avatar-4?bg=87CEEB&i=be176fd7d38de78c85dbfba873eb723a" width="80">
+                        <p class="text-secondary fw-bold">田中 太郎</p>
+                        <p class="border-bottom">アシスタント</p>
+                        <p>本ページはサンプルであり、サポートメンバーは架空の人物です。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-3 bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col"><a href="https://monomonotech.jp/" class="text-decoration-none text-white">&copy; ものものテック</a></div>
+                <div class="col text-end"><a href="#" class="text-decoration-none text-white"><i class="bi bi-chevron-up"></i> Back to top</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init({
+        duration: 1000,
+        once: true,
+    });
+</script>
+</body>
+</html>
