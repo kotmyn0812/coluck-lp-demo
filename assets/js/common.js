@@ -22,6 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const processing = () => {
     // jsの記述
+		if (document.querySelector("#top")) {
+			document.querySelector(".l-header__nav").classList.remove("sticky-top");
+			document.querySelector(".l-header__nav").classList.add("fixed-top");
+    }
+
     (function () {
       const video = document.querySelector("#mainv");
       const button = document.querySelector("[data-play]");
@@ -60,6 +65,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const windowHeight = window.innerHeight;
 
       const bottomPosition = scrollHeight - windowHeight; //スクロール一番下の値
+
+      if (pageTopPosition >= targetAreaPosition) {
+        pageTop.classList.add("new-class"); // 新しいクラスを付与
+      } else {
+        pageTop.classList.remove("new-class"); // エリアを離れたらクラスを削除
+      }
 
       if (bottomPosition - footHeight + 20 <= scrollPosition) {
         pageTopBtn.style.position = "absolute";
