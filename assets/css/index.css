@@ -15,6 +15,10 @@ body {
 	background-color: var(--keyColor) !important;
 }
 
+.py-6 {
+	padding-block: 70px;
+}
+
 /* header */
 .l-header__nav {
 	background-color: rgba(11, 25, 54, 0.3);
@@ -118,3 +122,18 @@ body {
 	}
 }
 /* top */
+
+/* footer */
+.page-top_container {
+	position: relative;
+}
+.page-top {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+
+	&.is-hide {
+
+	}
+}
+/* footer */
