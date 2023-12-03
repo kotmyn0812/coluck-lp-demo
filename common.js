@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         pageTopBtn.classList.add("is-hide"); // 新しいクラスを付与
       }
-      stopBtn();
 			const stopBtn = function () {
 				const video = document.querySelector("#mainv");
 				const button = document.querySelector("[data-play]");
@@ -50,16 +49,17 @@ document.addEventListener("DOMContentLoaded", () => {
 					if (this.classList.contains("stop")) {
 						this.classList.remove("stop");
 						video.play();
-						buttonImg.setAttribute("src", "/assets/img/stop.svg");
+						buttonImg.setAttribute("src", "./stop.svg");
 						buttonImg.setAttribute("alt", "stop");
 					} else {
 						this.classList.add("stop");
 						video.pause();
-						buttonImg.setAttribute("src", "/assets/img/start.svg");
+						buttonImg.setAttribute("src", "./start.svg");
 						buttonImg.setAttribute("alt", "play");
 					}
 				});
 			};
+
     }
 
     const pageTopfunc = () => {
