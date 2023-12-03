@@ -22,13 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const processing = () => {
     // jsの記述
-		let pageTopPosition = document
-			.querySelector(".page-top")
-			.getBoundingClientRect().top;
-		const pageTopBtn = document.querySelector(".page-top");
-		const scrollPosition = window.scrollY; //現在地
-		const footHeight = document.querySelector(".l-footer").clientHeight; //footerの高さ
-		let abjustPosY = 5;
     if (document.querySelector("#top")) {
       let targetAreaPosition = document
         .querySelector(".video-wrapper")
@@ -40,27 +33,35 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         pageTopBtn.classList.add("is-hide"); // 新しいクラスを付与
       }
-			const stopBtn = function () {
-				const video = document.querySelector("#mainv");
-				const button = document.querySelector("[data-play]");
-				const buttonImg = document.querySelector("[data-btnimg]");
+      const stopBtn = function () {
+        const video = document.querySelector("#mainv");
+        const button = document.querySelector("[data-play]");
+        const buttonImg = document.querySelector("[data-btnimg]");
 
-				button.addEventListener("click", function () {
-					if (this.classList.contains("stop")) {
-						this.classList.remove("stop");
-						video.play();
-						buttonImg.setAttribute("src", "./stop.svg");
-						buttonImg.setAttribute("alt", "stop");
-					} else {
-						this.classList.add("stop");
-						video.pause();
-						buttonImg.setAttribute("src", "./start.svg");
-						buttonImg.setAttribute("alt", "play");
-					}
-				});
-			};
-
+        button.addEventListener("click", function () {
+          if (this.classList.contains("stop")) {
+            this.classList.remove("stop");
+            video.play();
+            buttonImg.setAttribute("src", "./stop.svg");
+            buttonImg.setAttribute("alt", "stop");
+          } else {
+            this.classList.add("stop");
+            video.pause();
+            buttonImg.setAttribute("src", "./start.svg");
+            buttonImg.setAttribute("alt", "play");
+          }
+        });
+      };
+      stopBtn();
     }
+
+    let pageTopPosition = document
+      .querySelector(".page-top")
+      .getBoundingClientRect().top;
+    const pageTopBtn = document.querySelector(".page-top");
+    const scrollPosition = window.scrollY; //現在地
+    const footHeight = document.querySelector(".l-footer").clientHeight; //footerの高さ
+    let abjustPosY = 5;
 
     const pageTopfunc = () => {
       const scrollHeight = Math.max(
