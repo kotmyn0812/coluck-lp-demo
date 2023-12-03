@@ -101,12 +101,13 @@ body {
 .p-app {
 	position: relative;
 	overflow: hidden;
+	padding-block: 60px;
 
 	&::after {
 		position: absolute;
 		bottom: -40px;
-		mix-blend-mode: overlay;
-		right: 0;
+		mix-blend-mode: color-burn;
+		right: -90px;
 		display: block;
 		width: 300px;
 		height: 300px;
