@@ -134,8 +134,12 @@ body {
   position: fixed;
   right: 20px;
   bottom: 20px;
+	transition: all .3s ease-out;
+	opacity: 1;
 
   &.is-hide {
+		opacity: 0;
+		pointer-events: none;
   }
 }
 /* footer */
