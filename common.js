@@ -4,12 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const footer = document.querySelector(".l-footer");
 
   Promise.all([
-    fetch("/assets/parts/header.html")
+    fetch("./header.html")
       .then((response) => response.text())
       .then((htmlContent) => {
         header.outerHTML = htmlContent;
       }),
-    fetch("/assets/parts/footer.html")
+    fetch("./footer.html")
       .then((response) => response.text())
       .then((htmlContent) => {
         footer.outerHTML = htmlContent;
