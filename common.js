@@ -22,6 +22,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const processing = () => {
     // jsの記述
+    let pageTopPosition = document
+      .querySelector(".page-top")
+      .getBoundingClientRect().top;
+    const pageTopBtn = document.querySelector(".page-top");
+    const scrollPosition = window.scrollY; //現在地
+    const footHeight = document.querySelector(".l-footer").clientHeight; //footerの高さ
+    let abjustPosY = 5;
     if (document.querySelector("#top")) {
       let targetAreaPosition = document
         .querySelector(".video-wrapper")
@@ -54,14 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
       };
       stopBtn();
     }
-
-    let pageTopPosition = document
-      .querySelector(".page-top")
-      .getBoundingClientRect().top;
-    const pageTopBtn = document.querySelector(".page-top");
-    const scrollPosition = window.scrollY; //現在地
-    const footHeight = document.querySelector(".l-footer").clientHeight; //footerの高さ
-    let abjustPosY = 5;
 
     const pageTopfunc = () => {
       const scrollHeight = Math.max(
