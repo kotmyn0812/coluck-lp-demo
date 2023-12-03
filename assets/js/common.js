@@ -66,11 +66,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const bottomPosition = scrollHeight - windowHeight; //スクロール一番下の値
 
-      if (pageTopPosition >= targetAreaPosition) {
-        pageTop.classList.add("new-class"); // 新しいクラスを付与
-      } else {
-        pageTop.classList.remove("new-class"); // エリアを離れたらクラスを削除
-      }
+      // if (pageTopPosition >= targetAreaPosition) {
+      //   pageTop.classList.add("new-class"); // 新しいクラスを付与
+      // } else {
+      //   pageTop.classList.remove("new-class"); // エリアを離れたらクラスを削除
+      // }
 
       if (bottomPosition - footHeight + 20 <= scrollPosition) {
         pageTopBtn.style.position = "absolute";
